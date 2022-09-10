@@ -10,8 +10,11 @@
         <button class="h-10 w-10 text-lg text-zinc-600 bg-zinc-100 rounded-xl">
           <i class="fa-solid fa-bell"></i>
         </button>
-        <button class="h-10 w-10 text-lg text-zinc-600 bg-zinc-100 rounded-xl">
-          <i class="fa-solid fa-user"></i>
+        <button (click)="auth.loginWithRedirect()" class="overflow-hidden h-10 w-10 text-lg text-zinc-600 bg-zinc-100 rounded-xl">
+          <i class="fa-solid fa-user" *ngIf="!(auth.user$ | async); else photo"></i>
+          <ng-template #photo>
+            <img [src]="(auth.user$ | async)?.picture">
+          </ng-template>
         </button>
       </div>
     </nav>

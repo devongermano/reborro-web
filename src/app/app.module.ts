@@ -11,6 +11,7 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideMessaging,getMessaging } from '@angular/fire/messaging';
+import {AuthModule} from "@auth0/auth0-angular";
 
 @NgModule({
   declarations: [
@@ -20,6 +21,10 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
     BrowserModule,
     AppRoutingModule,
     UiModule,
+    AuthModule.forRoot({
+      domain: 'reborro.us.auth0.com',
+      clientId: '7Hsi5qNO0nZX4awfRZnb7ObtzIQZzbwu'
+    }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
