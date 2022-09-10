@@ -12,6 +12,7 @@ SwiperCore.use([Mousewheel, Pagination]);
 export class CtaCarouselComponent implements OnInit {
 
   config: SwiperOptions = {
+    spaceBetween: 18,
     mousewheel: true,
     slidesPerView: "auto",
     pagination: true,
