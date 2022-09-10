@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+:host ::ng-deep .swiper-slide {
+  @apply w-full;
+}
+
+:host ::ng-deep .swiper-pagination-bullet-active {
+  @apply bg-black;
+}

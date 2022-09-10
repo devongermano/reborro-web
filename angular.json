@@ -30,6 +30,11 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "node_modules/swiper"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -99,6 +104,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "otter-web:build:production",
+            "firebaseProject": "reborro",
+            "firebaseHostingSite": "reborro"
           }
         }
       }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "reborro": {
+      "hosting": {
+        "otter-web": [
+          "reborro"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "reborro"
+  }
+}

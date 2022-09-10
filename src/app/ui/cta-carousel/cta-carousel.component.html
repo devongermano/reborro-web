@@ -1,0 +1,16 @@
+<swiper
+  [config]="config"
+  (swiper)="onSwiper($event)"
+  (slideChange)="onSlideChange()"
+>
+  <ng-template swiperSlide>
+    <div class="bg-sky-500 text-white rounded-2xl h-56 w-full flex items-center p-10">
+      <p class="font-bold text-white text-3xl">Rent it from your neighbor. <br/>Save the world.</p>
+    </div>
+  </ng-template>
+  <ng-template swiperSlide>
+    <div class="bg-black text-white rounded-2xl h-56 w-full flex items-center p-10">
+      <p class="font-bold text-white text-3xl">Rent it from your neighbor. <br/>Save the world.</p>
+    </div>
+  </ng-template>
+</swiper>
